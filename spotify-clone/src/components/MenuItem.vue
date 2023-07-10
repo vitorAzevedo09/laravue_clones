@@ -44,7 +44,10 @@ const isHover = () => {
     @mouseenter="isHover()"
     @mouseleave="isHover()"
   >
-    <img :width="iconSize" :src="`/images/icons/${icon}.png`" />
+    <img
+      :width="iconSize"
+      :src="`/images/icons/${icon}.png`"
+    >
     <div :class="textIsHover ? 'text-white' : 'text-gray-400'">
       <span
         :class="route.path == pageUrl ? 'text-white' : ''"

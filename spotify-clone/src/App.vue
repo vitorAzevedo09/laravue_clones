@@ -20,13 +20,19 @@ let openMenu = ref(false);
           type="button"
           class="rounded-full bg-black p-[1px] cursor-pointer"
         >
-          <ChevronLeft fillColor="#FFFFFF" :size="38" />
+          <ChevronLeft
+            fill-color="#FFFFFF"
+            :size="38"
+          />
         </button>
         <button
           type="button"
           class="rounded-full ml-4 bg-black p-[1px] cursor-pointer"
         >
-          <ChevronRight fillColor="#FFFFFF" :size="38" />
+          <ChevronRight
+            fill-color="#FFFFFF"
+            :size="38"
+          />
         </button>
       </div>
       <button
@@ -38,12 +44,20 @@ let openMenu = ref(false);
             class="rounded-full"
             width="27"
             src="https://yt3.ggpht.com/yti/AHyvSCBNVyNt6TRfQo6BsbKQGxw4E7QWb3VXufgDDwB2wg=s88-c-k-c0x00ffffff-no-rj-mo"
-          />
+          >
           <div class="text-white text-[0.8rem] ml-1.5 font-semibold">
             Vitor Azevedo
           </div>
-          <ChevronDown v-if="!openMenu" fillColor="#FFFFFF" :size="25" />
-          <ChevronUp v-else fillColor="#FFFFFF" :size="25" />
+          <ChevronDown
+            v-if="!openMenu"
+            fill-color="#FFFFFF"
+            :size="25"
+          />
+          <ChevronUp
+            v-else
+            fill-color="#FFFFFF"
+            :size="25"
+          />
         </div>
       </button>
       <span
@@ -58,46 +72,57 @@ let openMenu = ref(false);
         </ul>
       </span>
     </div>
-    <div id="SideNav" class="h-[100%] p-6 w-[260px] fixed z-50 bg-black">
+    <div
+      id="SideNav"
+      class="h-[100%] p-6 w-[260px] fixed z-50 bg-black"
+    >
       <RouterLink to="/">
-        <img width="125" src="/images/icons/spotify-logo.png" />
+        <img
+          width="125"
+          src="/images/icons/spotify-logo.png"
+        >
       </RouterLink>
-      <div class="my-8"></div>
+      <div class="my-8" />
       <ul>
         <RouterLink to="/">
-          <MenuItem :iconSize="23" name="Home" iconString="home" pageUrl="/" />
+          <MenuItem
+            :icon-size="23"
+            name="Home"
+            icon-string="home"
+            page-url="/"
+          />
         </RouterLink>
         <RouterLink to="/search">
           <MenuItem
-            :iconSize="24"
+            :icon-size="24"
             name="Search"
-            iconString="search"
-            pageUrl="/search"
+            icon-string="search"
+            page-url="/search"
           />
         </RouterLink>
         <RouterLink to="/library">
           <MenuItem
-            :iconSize="23"
+            :icon-size="23"
             name="Library"
-            iconString="library"
-            pageUrl="/library"
+            icon-string="library"
+            page-url="/library"
           />
         </RouterLink>
       </ul>
-      <div class="py-3.5"></div>
+      <div class="py-3.5" />
       <MenuItem
-        :iconSize="24"
+        :icon-size="24"
         name="Create Playlist"
-        iconString="playlist"
-        pageUrl="/playlist"
+        icon-string="playlist"
+        page-url="/playlist"
       />
       <MenuItem
-        :iconSize="27"
+        :icon-size="27"
         name="Liked Songs"
-        iconString="liked"
-        pageUrl="/liked"
+        icon-string="liked"
+        page-url="/liked"
       />
-      <div class="border-b border-b-gray-700"></div>
+      <div class="border-b border-b-gray-700" />
       <ul>
         <li
           class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer"
@@ -125,9 +150,9 @@ let openMenu = ref(false);
   <div
     class="fixed right-0 top-0 w-[calc(100%-240px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black"
   >
-    <div class="mt-70px"></div>
+    <div class="mt-70px" />
     <RouterView />
-    <div class="mb-[100px]"></div>
+    <div class="mb-[100px]" />
   </div>
 </template>
 
