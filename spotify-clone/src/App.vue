@@ -13,7 +13,7 @@ let openMenu = ref(false);
 <template>
   <div>
     <div
-      class="w-[100%] h-[60px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between"
+      class="w-[81%] h-[40px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between"
     >
       <div class="flex items-center ml-6">
         <button
@@ -22,7 +22,7 @@ let openMenu = ref(false);
         >
           <ChevronLeft
             fill-color="#FFFFFF"
-            :size="38"
+            :size="30"
           />
         </button>
         <button
@@ -31,7 +31,7 @@ let openMenu = ref(false);
         >
           <ChevronRight
             fill-color="#FFFFFF"
-            :size="38"
+            :size="30"
           />
         </button>
       </div>
@@ -148,9 +148,9 @@ let openMenu = ref(false);
     </div>
   </div>
   <div
-    class="fixed right-0 top-0 w-[calc(100%-240px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black"
+    class="fixed -right-0 top-0 w-[calc(100%-260px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black"
   >
-    <div class="mt-70px" />
+    <div class="mt-[70px]" />
     <RouterView />
     <div class="mb-[100px]" />
   </div>
