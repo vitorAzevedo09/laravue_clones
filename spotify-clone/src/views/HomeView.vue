@@ -75,7 +75,7 @@ const recommendations = ref([{
   >
     <button
       type="button"
-      class="w-100 text-white text-xl font-semibold hover:underline cursor-pointer"
+      class="w-80 text-white text-xl font-semibold hover:underline cursor-pointer"
     >
       {{ recommendation.title }}
     </button>
