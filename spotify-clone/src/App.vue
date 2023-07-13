@@ -12,9 +12,7 @@ let openMenu = ref(false);
 </script>
 <template>
   <div>
-    <div
-      class="w-[81%] h-[40px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between"
-    >
+    <div class="w-[81%] h-[40px] fixed right-0 z-20 bg-[#101010] bg-opacity-80 flex items-center justify-between">
       <div class="flex items-center ml-6">
         <button
           type="button"
@@ -124,34 +122,24 @@ let openMenu = ref(false);
       />
       <div class="border-b border-b-gray-700" />
       <ul>
-        <li
-          class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer"
-        >
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer">
           My Playlist #1
         </li>
-        <li
-          class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer"
-        >
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer">
           My Playlist #2
         </li>
-        <li
-          class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer"
-        >
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer">
           My Playlist #3
         </li>
-        <li
-          class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer"
-        >
+        <li class="font-semibold text-[13px] mt-3 text-gray-300 hover:text-white cursor-pointer">
           My Playlist #4
         </li>
       </ul>
     </div>
   </div>
-  <div
-    class="fixed -right-0 top-0 w-[calc(100%-260px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black"
-  >
+  <div class="fixed -right-0 top-0 w-[calc(100%-260px)] overflow-auto h-full bg-gradient-to-b from-[#1C1C1C] to-black">
     <div class="mt-[70px]" />
-    <RouterView />
+    <RouterView class="w-[83%] ml-5" />
     <div class="mb-[100px]" />
   </div>
 </template>
