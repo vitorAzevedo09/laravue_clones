@@ -7,7 +7,22 @@ import ClockTimeThreeOutline from 'vue-material-design-icons/ClockTimeThreeOutli
 import artists from '../json/artists.json'
 import { ref } from 'vue'
 
+
+import { useSongStore } from '../stores/song.js'
+import { storeToRefs } from 'pinia'
+const useSong = useSongStore()
+
+const { isPlaying, currentTrack, currentArtist } = storeToRefs(useSong)
+
 const artist = ref(artists)
+
+const playFunc = () => {
+  if(currentTrack.value){
+    useSong.playOrPauseThisSong(currentArtist.value, currentTrack.value)
+    return
+  }
+  useSong.playFromFirst()
+}
 
 </script>
 <template>
@@ -44,9 +59,10 @@ const artist = ref(artists)
             <button
               type="button"
               class="p-1 rounded-full bg-white"
+              @click="playFunc()"
             >
               <Play
-                v-if="true"
+                v-if="!isPlaying"
                 fill-color="#181818"
                 size="25"
               />
